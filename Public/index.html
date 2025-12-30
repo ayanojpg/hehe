@@ -50,24 +50,6 @@
                     <h3 class="section-subheading text-muted">基嗶基嗶家八家八</h3>
                 </div>
             </div>
-            <div class="row">
-                <div v-for="(item,idx) in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                    <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img :src="item.imgSrc" class="w-100" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4 v-if="idx%2==0">{{item.title}}</h4>
-                        <h4 v-else>{{item.title}} 2</h4>
-                        <p class="text-muted">{{item.subtitle}}</p>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
