@@ -185,13 +185,13 @@
         <!-- Bottom Slider -->
 <section class="bottom-slider">
     <div class="slider-track">
-        <div class="slide"><img src="img/IMG_0209.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_0228.png" alt=""></div>
+        <div  v-for="item in Services" class="slide"><img v-bind:src="item.name" ></div>
+        <!--<div class="slide"><img src="img/IMG_0228.png" alt=""></div>
         <div class="slide"><img src="img/IMG_0236.png" alt=""></div>
         <div class="slide"><img src="img/IMG_0254.png" alt=""></div>
         <div class="slide"><img src="img/IMG_1755.png" alt=""></div>
         <div class="slide"><img src="img/IMG_1692.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_1589.png" alt=""></div>
+        <div class="slide"><img src="img/IMG_1589.png" alt=""></div>-->
 
         <!-- 複製一輪，做無限輪播用 -->
         <div class="slide"><img src="img/IMG_0209.png" alt=""></div>

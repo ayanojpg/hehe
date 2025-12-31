@@ -34,14 +34,14 @@ var ContactDB = DB.create(__dirname+"/Contact.db");
 server.get("/", (req, res) => {
     res.send("Hello world!");
 })
-server.get("/services", (req, res) => {
+server.get("/art", (req, res) => {
     //db 
     // var Services = [
     //     { icon: 'fa-shopping-cart', title: 'E-Commerce', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur porro laborum fuga repellat necessitatibus corporis nulla, in ex velit recusandae obcaecati maiores, doloremque quisquam similique, tempora aspernatur eligendi delectus! Rem.' },
     //     { icon: 'fa-laptop', title: 'Responsive Design', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.' },
     //     { icon: 'fa-lock', title: 'Web Security', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.' }
     // ]
-    ServiceDB.find({},{_id:0}).then(results=>{
+    ArtDB.find({},{_id:0}).then(results=>{
        
         res.send(results);
     }).catch(error=>{
@@ -50,7 +50,7 @@ server.get("/services", (req, res) => {
     
 })
 
-server.get("/portfolio", (req, res) => {
+server.get("/aaaaa", (req, res) => {
     // var Portfolio = [
     //     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
     //     { href: "#portfolioModal2", imgSrc: "img/portfolio/startup-framework.png", title: "Startup Framework", text: "Website Design" },
@@ -66,12 +66,9 @@ server.get("/portfolio", (req, res) => {
 })
 
 
-server.get("/showServices",(req,res)=>{
-    ServiceDB.find({},{_id:0}).then(results=>{
-       
-        res.render("service",{Services:results});
-    }).catch(error=>{
-
+server.get("/showArt",(req,res)=>{
+    ArtDB.find({},{_id:0}).then(results=>{
+        res.send(results);
     })
 
 })

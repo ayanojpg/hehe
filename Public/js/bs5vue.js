@@ -29,11 +29,11 @@ var serviceApp=createApp({
             Services: []
         }
     }
-}).mount("#services");
+}).mount("#showArt");
 
 //req services data fromm server
 $.ajax({
-    url:"/services",
+    url:"/art",
     method:"get",
     dataType:"json",
     success: (result)=>{
@@ -49,10 +49,10 @@ var portfolioApp=createApp({
             Portfolio: ref([])
         }
     }
-}).mount("#portfolio");
+}).mount("#aaaaa");
 
 $.ajax({
-    url:"/portfolio",
+    url:"/aaaaa",
     method:"get",
     dataType:"json",
     success: (result)=>{

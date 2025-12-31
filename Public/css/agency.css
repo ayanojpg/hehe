@@ -807,6 +807,11 @@ header h2 {
   width: max-content; /* 自動寬度 */
   animation: scroll 30s linear infinite;
 }
+.slider-track:hover {
+  display: flex;
+  width: max-content; /* 自動寬度 */
+  animation: scrollBack 30s linear infinite;
+}
 
 .slide {
     width: 300px;
@@ -823,6 +828,10 @@ header h2 {
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* 移動半軌道，因為複製了一輪 */
+}
+@keyframes scrollBack {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); } /* 移動半軌道，因為複製了一輪 */
 }
 .bottom-slider:hover .slider-track {
     animation-play-state: paused;
